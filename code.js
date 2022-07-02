@@ -4,6 +4,7 @@
 // The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
 // My Solution:
+
 function calculatePair (strand) {
   if (strand === "A") {
   return "T";
@@ -14,15 +15,17 @@ function calculatePair (strand) {
 } else if (strand === "G") {
   return  "C";
 }
-}
+  } 
 
 function pairElement(input) {
 let initialStrand = input.split("");
 let sequence= [];
-
 initialStrand.forEach(initialStrandElement => {
 let doubleHelix = [initialStrandElement, calculatePair(initialStrandElement)];
 sequence.push(doubleHelix);
 });
 return sequence; 
 }
+
+//DNA Pairing-Free Code Camp- Intermediate Algorithm Scripting:
+link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing
